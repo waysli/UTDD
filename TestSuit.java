@@ -8,6 +8,12 @@ public class TestSuit {
             System.out.printf("期望是:%d，实际是：%d. 失败！\n", expect, result);
         }
     }
+    public static void testCase0() {
+        num = 1;
+        result = 1;
+        System.out.printf("testCase0, %d的阶乘: ", num);
+        equal(result, Factorials.getFactorials(num));
+    }
     public static void testCase1() {
         num = 1;
         result = 1;
@@ -32,6 +38,7 @@ public class TestSuit {
             num = Integer.parseInt(args[0]);
             System.out.printf("%d的阶乘是:%d\n", num, Factorials.getFactorials(num));
         } else {
+            testCase0();
             testCase1();
             testCase2();
             testCase3();
